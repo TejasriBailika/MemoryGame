@@ -19,3 +19,8 @@ Flip another card to find its matching pair.
 If the cards match, they stay revealed. If not, they flip back.
 
 Continue until all pairs are matched to win the game!
+
+## Demo
+
+## 📸 Screenshot
+![Shinchan Memory Game Screenshot](Homepage.png)
