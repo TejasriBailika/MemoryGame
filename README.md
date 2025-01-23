@@ -22,4 +22,4 @@ Continue until all pairs are matched to win the game!
 
 ## Demo
 
-  ![Home page](Homepage.png)
+  ![Home page](MemoryGame/Shinchangame/Homepage.png)
