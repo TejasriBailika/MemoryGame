@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    font-weight: 400;
+    background-color: #ffae42;
+    color: white;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #000033;
+    align-items: center;
+    height: 93%;
+    position: relative;
+    overflow: hidden;
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('Shinchanimages/star.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) scale(1);
+        opacity: 0;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 40%;
+    height: 80%;
+    position: relative;
+    z-index: 1;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff99cc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+    transform: scale(1.5);
+}
+
+.grid-item-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.grid-item-front,
+.grid-item-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s;
+}
+
+.grid-item-back {
+    background-color:  #333333;
+}
+
+.grid-item-front {
+    background-color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item.flipped .grid-item-front {
+    display: flex;
+}
+
+.grid-item.flipped .grid-item-back {
+    transform: rotateY(180deg);
+}
+
+.win-card {
+    box-shadow: 0 0 10px 5px #ffff00;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+}
+
+.message-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: popUp 0.5s ease-out;
+    z-index: 999;
+}
+
+@keyframes popUp {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+#win-message {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#restart-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#restart-btn:hover {
+    background-color: #e6951a;
+}
