@@ -3,8 +3,11 @@ A fun and interactive memory game featuring Shinchan's family and friends. Test 
 
 ## Features
 Interactive Gameplay: Flip the cards to reveal hidden characters and find their matches.
+
 Shinchan Characters: Includes iconic characters from Shinchan's family and friends.
+
 Responsive Design: The game adapts to different screen sizes for a seamless experience.
+
 Vibrant Visuals: Includes a starry night background and colorful borders for an engaging design.
 
 ## How to Play
