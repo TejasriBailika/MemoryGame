@@ -11,7 +11,11 @@ Responsive Design: The game adapts to different screen sizes for a seamless expe
 Vibrant Visuals: Includes a starry night background and colorful borders for an engaging design.
 
 ## How to Play
+
 Click on a card to flip it and reveal the character.
+
 Flip another card to find its matching pair.
+
 If the cards match, they stay revealed. If not, they flip back.
+
 Continue until all pairs are matched to win the game!
